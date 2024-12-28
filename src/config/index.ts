@@ -11,6 +11,7 @@ interface iConfig {
   };
 }
 
+console.log('process.env.PRIVATE_KEY', process.env);
 export default (): Partial<iConfig> => ({
   env: process.env.NODE_ENV || 'development',
   port: parseInt(process.env.PORT, 10) || 3000,
